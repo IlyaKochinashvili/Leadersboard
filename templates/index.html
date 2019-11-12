@@ -1,0 +1,282 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Shrewd - Political HTML5 Template</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="56x56" href="{% static 'assets/images/fav-icon/icon.png' %}">
+	<!-- bootstrap CSS -->
+	<link rel="stylesheet" 	href="{% static 'assets/css/bootstrap.min.css' %}" type="text/css" media="all" />
+	<!-- venobox CSS -->
+	<link rel="stylesheet" 	href="{% static 'venobox/venobox.css' %}" type="text/css" media="all" />
+	<!-- nivo-slider CSS -->
+	<link rel="stylesheet" 	href="{% static 'assets/css/nivo-slider.css' %}" type="text/css" media="all" />
+	<!-- nivo-slider CSS -->
+	<link rel="stylesheet" 	href="{% static 'assets/css/animate.css' %}" type="text/css" media="all" />
+	<!-- slick CSS -->
+	<link rel="stylesheet"  href="{% static 'assets/css/slick.css' %}" type="text/css" media="all" />
+	<!-- owl-carousel CSS -->
+	<link rel="stylesheet" 	href="{% static 'assets/css/owl.carousel.css' %}" type="text/css" media="all" />
+	<!-- owl-transitions CSS -->
+	<link rel="stylesheet" 	href="{% static 'assets/css/owl.transitions.css' %}" type="text/css" media="all" />
+	<!-- font-awesome CSS -->
+	<link rel="stylesheet"  href="{% static 'assets/css/font-awesome.min.css' %}" type="text/css" media="all" />
+	<!-- meanmenu CSS -->
+	<link rel="stylesheet"  href="{% static 'assets/css/meanmenu.min.css' %}" type="text/css" media="all" />
+	<!-- header-menu -->
+	<link rel="stylesheet"  href="{% static 'assets/css/header-menu.css' %}" type="text/css" media="all" />
+	<!-- theme-default CSS -->
+	<link rel="stylesheet"  href="{% static 'assets/css/theme-default.css' %}" type="text/css" media="all" />
+	<!-- widget CSS -->
+	<link rel="stylesheet"  href="{% static 'assets/css/widget.css' %}" type="text/css" media="all" />
+	<!-- unittest CSS -->
+	<link rel="stylesheet"  href="{% static 'assets/css/unittest.css' %}" type="text/css" media="all" />
+	<!-- Main Style CSS -->
+	<link rel="stylesheet"  href="{% static 'style.css' %}" type="text/css" media="all" />
+	<!-- responsive CSS -->
+	<link rel="stylesheet"  href="{% static 'assets/css/responsive.css' %}" type="text/css" media="all" />
+	<!-- modernizr js -->	
+	<script type="text/javascript" src="/static/assets/js/vendor/modernizr-3.5.0.min.js"></script>	
+	
+</head>
+<body>
+
+
+<!-- START TEAM AREA -->
+<div class="team_area">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="section_title">
+					<div class="section_title_inner team_sec">
+						<h1>Leader Board</h1>
+						<h2>Our Leaders:</h2>
+					</div>
+				</div>
+			</div>
+			<!-- right -->
+			{% for person in persons %}
+			<div class="col-md-2">
+				<div class="row">
+					<!-- single team -->
+					<div class="col-md-12 col-sm-6 col-xs-12">
+						<div class="single_team">
+							<div class="single_team_thumb">
+								<img src="{{ person.photo.url }}" alt="title"
+									 style="width: 165px; height: 165px;" />
+								<div class="single_team_content_wp">
+									<div class="single_team_content">
+										<h1>{{ person.name }}</h1>
+										<p>{{ person.points }}</p>
+									</div>
+									<div class="single_team_social">
+										<ul>
+											<li><a href="{{ person.facebook }}"><i class="fa fa-facebook"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- END TEAM AREA -->
+
+
+<!-- COUNTDOWN AREA START	 -->
+<div class="countdown_area">		
+	<div class="container">
+		<div class="row ">
+			<div class="col-md-4">
+				<div class="countdown_title">
+					<div class="countdown_title_inner">
+						<h2>Upcoming Event</h2>
+						<p><i class="fa fa-map-marker"></i>Clasgow, amrica 8850 new york</p>
+					</div>
+				</div>	
+			</div>	
+			<div class="col-md-8">				
+				<div class="counterdowns">
+					<div class="counter">	
+						<div class="timer">
+							<div class="autob" data-countdown="2019/12/31"></div>
+						</div>									
+					</div>
+				</div>
+				<!-- btn -->
+				<div class="countdown_btn">
+					<a href="event.html">All Event Details</a>
+				</div>				
+			</div>
+		</div>
+	</div>	
+</div>		
+<!-- COUNTDOWN AREA END	 -->
+	
+
+<!-- FOOTER MIDDLE AREA -->
+	<div class="countdown_area">
+		<div class="container">
+			<div class="row">
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="single_footer">
+						<div class="single_footer_logo">
+							<img src="/static/assets/images/logo/log2.png" alt="" />
+						</div>
+						<div class="single_footer_desc">
+							<p>Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="single_footer_icon">
+							<ul>
+								<li><a href="https://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+								<li><a href=""><i class="fa fa-globe"></i></a></li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+				<div class="col-md-2 col-sm-6 col-xs-12">
+					<div class="single_nav">
+						<div class="single_widget_title">
+							<h3>Help Link</h3>
+						</div>
+						<div class="single_widget_nav">
+							<ul>
+								<li><a href="index.html#">Privacy Policy</a></li>
+								<li><a href="index.html#">Terms of Service</a></li>
+								<li><a href="index.html#">Legal info</a></li>
+								<li><a href="index.html#">Knowledge Base</a></li>
+								<li><a href="index.html#">GDPR Update</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="single_address">
+						<div class="single_widget_title">		
+							<h3>our address</h3>
+						</div>
+						<div class="single_widget_nav">
+							<ul>
+								<li><a href="index.html#">178 Alex Avenue. William Street.
+								New York, NY-25435</a></li>
+								<li><a href="index.html#">(088) 323 856 455 demo@example.com</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="single_Instagram">
+						<div class="single_Instagram_title single_widget_title">
+							<h3>Instagram</h3>
+						</div>
+						<!-- image -->
+						<div class="single_Instagram_image">
+							<a href="index.html1#" ><img src="/static/assets/images/instagram/i1.png" alt="logo" ></a>
+						</div>
+						<!-- image 2 -->
+						<div class="single_Instagram_image">
+							<a href="index.html2#" ><img src="/static/assets/images/instagram/i2.png" alt="logo" ></a>
+						</div>
+						<!-- image 3 -->
+						<div class="single_Instagram_image">
+							<a href="index.html3#" ><img src="/static/assets/images/instagram/i3.png" alt="logo" ></a>
+						</div>
+						<!-- image 4 -->
+						<div class="single_Instagram_image">
+							<a href="index.html4#" ><img src="/static/assets/images/instagram/i4.png" alt="logo" ></a>
+						</div>
+						<!-- image 5 -->
+						<div class="single_Instagram_image">
+							<a href="index.html5#" ><img src="/static/assets/images/instagram/i5.png" alt="logo" ></a>
+						</div>
+						<!-- image 6 -->
+						<div class="single_Instagram_image">
+							<a href="index.html6#" ><img src="/static/assets/images/instagram/i6.png" alt="logo" ></a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- footer bottom start -->
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="copy-right-text">
+								<!-- FOOTER COPYRIGHT TEXT -->
+								<p>Copyright 2019, Shrewd All Rights Reserved.</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">				
+							<div class="footer-menu">
+								<!-- FOOTER COPYRIGHT MENU -->
+								 <ul class="text-right">       
+									<li><a href="index.html#">About us</a></li>
+									<li><a href="index.html#">Service</a></li>
+									<li><a href="index.html#">Privacy Policy</a></li>
+									<li><a href="index.html#">Contact Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer bottom end -->			
+		</div>
+	</div>		
+	<!-- END FOOTER MIDDLE AREA -->
+
+	
+
+	<!-- Main jquery js -->	
+	<script type="text/javascript" src="/static/assets/js/vendor/jquery-3.2.1.min.js"></script>
+	<!-- bootstrap js -->	
+	<script type="text/javascript" src="/static/assets/js/bootstrap.min.js"></script>
+	<!-- directional js -->	
+	<script type="text/javascript" src="/static/assets/js/jquery.directional-hover.min.js"></script>
+	<!-- imagesloaded js -->	
+	<script type="text/javascript" src="/static/assets/js/imagesloaded.pkgd.min.js"></script>
+	<!-- meanmenu js -->	
+	<script type="text/javascript" src="/static/assets/js/jquery.meanmenu.js"></script>
+	<!-- isotope js -->	
+	<script type="text/javascript" src="/static/assets/js/isotope.pkgd.min.js"></script>
+	<!-- owl-carousel js -->	
+	<script type="text/javascript" src="/static/assets/js/owl.carousel.min.js"></script>
+	<!-- scrollUp js -->	
+	<script type="text/javascript" src="/static/assets/js/jquery.scrollUp.js"></script>
+	<!-- nivo-slider js -->	
+	<script type="text/javascript" src="/static/assets/js/jquery.nivo.slider.pack.js"></script>
+	<!-- headroom js -->	
+	<script type="text/javascript" src="/static/assets/js/headroom.min.js"></script>
+	<!-- counterup js -->	
+	<script type="text/javascript" src="/static/assets/js/jquery.counterup.min.js"></script>
+	<!-- slick js -->	
+	<script type="text/javascript" src="/static/assets/js/slick.min.js"></script>
+	<!-- jquery Nav js -->	
+	<script type="text/javascript" src="/static/assets/js/jquery.nav.js"></script>
+	<!-- wow js -->	
+	<script type="text/javascript" src="/static/assets/js/wow.js"></script>
+	<!-- scrolltofixed js -->	
+	<script type="text/javascript" src="/static/assets/js/jquery-scrolltofixed-min.js"></script>
+	<!-- venobox js -->	
+	<script type="text/javascript" src="/static/venobox/venobox.min.js"></script>
+	<!-- waypoints js -->	
+	<script type="text/javascript" src="/static/assets/js/waypoints.min.js"></script>
+	<script type="text/javascript" src="/static/assets/js/jquery.countdown.min.js"></script>
+	<!-- Main js -->	
+	<script type="text/javascript" src="/static/assets/js/theme.js"></script>
+	
+	</body>
+</html>

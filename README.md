@@ -1,2 +1,2 @@
-# Leadersboard
+# Leaderboard
 None
