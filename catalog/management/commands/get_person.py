@@ -12,17 +12,13 @@ time_stamp = os.path.getmtime('./Persons list.xlsx')
 
 
 def update():
-    # Person.objects.filter().delete()
     get_data()
 
 
 def get_data():
     wb = load_workbook('./Persons list.xlsx')
     sheet = wb.get_sheet_by_name('Sheet1')
-    data = sheet.values
-    n_data = []
-    for i in data:
-        n_data.append(i)
+    n_data = [i for i in sheet.values]
     n_data = n_data[1:]
 
     for i in n_data:
@@ -35,12 +31,10 @@ def get_data():
         facebook = i[3]
         person = {
             'name': name,
-            'points': points,
-            'photo': photo,
             'facebook': facebook,
         }
         try:
-            Person.objects.create(**person)
+            p, created = Person.objects.update_or_create(**person, defaults={'points': points, 'photo': photo,})
             print(person)
         except Exception as e:
             print(type(e), e)
