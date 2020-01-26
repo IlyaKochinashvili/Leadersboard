@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from catalog import models
 from catalog.models import Person
 
 
@@ -8,4 +7,3 @@ def index_view(request):
     persons = Person.objects.order_by('-points')[:10]
     context = {'persons': persons, }
     return render(request, 'index.html', context)
-

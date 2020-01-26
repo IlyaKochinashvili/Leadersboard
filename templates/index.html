@@ -1,11 +1,12 @@
 {% load static %}
+{% load babel %}
 
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Shrewd - Political HTML5 Template</title>
+	<title>LOYAC.Leadersboard</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	
@@ -73,7 +74,7 @@
 								<div class="single_team_content_wp">
 									<div class="single_team_content">
 										<h1>{{ person.name }}</h1>
-										<p>{{ person.points }}</p>
+										<p>{{ person.points|scientificfmt }}</p>
 									</div>
 									<div class="single_team_social">
 										<ul>

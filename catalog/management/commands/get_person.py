@@ -1,4 +1,3 @@
-import os
 from concurrent.futures.thread import ThreadPoolExecutor
 
 from django.core.management.base import BaseCommand
@@ -32,7 +31,9 @@ def get_data():
             'facebook': facebook,
         }
         try:
-            p, created = Person.objects.update_or_create(**person, defaults={'points': points, 'photo': photo, })
+            p, created = Person.objects.update_or_create(
+                **person, defaults={'points': points, 'photo': photo, }
+            )
             print(person)
         except Exception as e:
             print(type(e), e)
